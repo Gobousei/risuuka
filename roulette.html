@@ -47,7 +47,6 @@
     function start_set(){//start状態
         document.getElementById("start").disabled = true;
         document.getElementById("stop").disabled = false;
-        document.getElementById("reset").disabled = false;
         if(first === false){
             interval = setInterval(start_go,100);
             first = true;
@@ -85,13 +84,10 @@
     }
         const starter = document.getElementById("start");
         const stopper = document.getElementById("stop");
-        const resetter = document.getElementById("reset");
 
         starter.addEventListener("click",start_set,false);
         stopper.addEventListener("click",stop_set,false);
-        resetter.addEventListener("click",reset_set,false);
         document.getElementById("stop").disabled = true;
-        document.getElementById("reset").disabled = true;
 
 })
 </script>
@@ -167,7 +163,6 @@ button:hover {
       <div class="c_button">
           <button id ="start">スタート</button>
           <button id ="stop">ストップ</button>
-          <button id ="reset">リセット</button>
       </div>
   </div>
 </body>
